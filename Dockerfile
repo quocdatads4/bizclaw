@@ -1,10 +1,11 @@
 # ═══════════════════════════════════════════════════════════════
 # BizClaw AI Agent Platform — Multi-stage Docker Build
 # Self-hosted on Pi, VPS, or any Linux machine
+# Fixed: rust:1.82 → rust:latest (Cargo.toml requires rust 1.85+)
 # ═══════════════════════════════════════════════════════════════
 
 # Stage 1: Build
-FROM rust:1.82-bookworm AS builder
+FROM rust:latest AS builder
 
 WORKDIR /build
 
